@@ -3,5 +3,8 @@ dist: focal
 group: dev
 
 script:
+  - \#   <---- ERLANG ---->
   - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+  - \#   <---- ELASTICSEARCH ---->
+  - curl 127.0.0.1:9200
                 
