@@ -11,5 +11,5 @@ script:
   - \#   <---- COUCHDB ---->
   - curl 127.0.0.1:5984
   - \#   <---- POSTGRESQL ---->
-  - psql -c 'create database travis_ci_test;' -U postgres'
+  - psql -c 'create database travis_ci_test;' -U postgres
                 
