@@ -8,5 +8,6 @@ script:
   - curl 127.0.0.1:5984
   - sudo service postgresql status
   - sudo service postgresql start
+  - netstat -nltp
   - psql -c 'create database travis_ci_test;' -U postgres
                 
