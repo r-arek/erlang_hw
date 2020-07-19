@@ -3,13 +3,10 @@ dist: focal
 group: dev
 
 script:
-  - \#   <---- ERLANG ---->
   - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
-  - \#   <---- ELASTICSEARCH ---->
   - curl 127.0.0.1:9200
-  - curl http://127.0.0.1:9200/
-  - \#   <---- COUCHDB ---->
   - curl 127.0.0.1:5984
-  - \#   <---- POSTGRESQL ---->
+  - service postgresql status
+  - service postgresql start
   - psql -c 'create database travis_ci_test;' -U postgres
                 
