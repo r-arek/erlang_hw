@@ -6,7 +6,7 @@ script:
   - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
   - curl 127.0.0.1:9200
   - curl 127.0.0.1:5984
-  - service postgresql status
-  - service postgresql start
+  - sudo service postgresql status
+  - sudo service postgresql start
   - psql -c 'create database travis_ci_test;' -U postgres
                 
