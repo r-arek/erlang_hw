@@ -9,5 +9,8 @@ script:
   #- sudo service postgresql status
   #- netstat -nltp
   #- cat /etc/postgresql/12/main/pg_hba.conf | grep trust
+  - systemctl status postgresql
+  - systemctl start postgresql
+  - systemctl status postgresql
   - psql -c 'create database travis_ci_test;' -U postgres
                 
