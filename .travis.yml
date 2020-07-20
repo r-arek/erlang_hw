@@ -3,11 +3,11 @@ dist: focal
 group: dev
 
 script:
-  - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
-  - curl 127.0.0.1:9200
-  - curl 127.0.0.1:5984
-  - sudo service postgresql status
-  - netstat -nltp
-  - cat /etc/postgresql/12/main/pg_hba.conf | grep trust
+  #- erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+  #- curl 127.0.0.1:9200
+  #- curl 127.0.0.1:5984
+  #- sudo service postgresql status
+  #- netstat -nltp
+  #- cat /etc/postgresql/12/main/pg_hba.conf | grep trust
   - psql -c 'create database travis_ci_test;' -U postgres
                 
