@@ -13,4 +13,5 @@ script:
   - sudo systemctl restart postgresql
   - systemctl status postgresql
   - psql -c 'create database travis_ci_test;' -U postgres
+  - echo "test"
                 
