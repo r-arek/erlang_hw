@@ -9,9 +9,11 @@ script:
   #- sudo service postgresql status
   #- netstat -nltp
   #- cat /etc/postgresql/12/main/pg_hba.conf | grep trust
-  - systemctl status postgresql
-  - sudo systemctl restart postgresql
-  - systemctl status postgresql
-  - psql -c 'create database travis_ci_test;' -U postgres
-  - echo "test"
+  - systemctl status mongodb
+  - systemctl status couchdb
+  #- systemctl status postgresql
+  #- sudo systemctl restart postgresql
+  #- systemctl status postgresql
+  #- psql -c 'create database travis_ci_test;' -U postgres
+  #- echo "test"
                 
