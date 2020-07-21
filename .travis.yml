@@ -3,11 +3,11 @@ dist: focal
 group: dev
 
 services:
-  - mongodb
+  # - mongodb
   - couchdb
-  - mysql
-  - postgresql
-  - elasticsearch
+  # - mysql
+  # - postgresql
+  # - elasticsearch
 
 script:
   #- erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
@@ -16,11 +16,11 @@ script:
   #- sudo service postgresql status
   #- netstat -nltp
   #- cat /etc/postgresql/12/main/pg_hba.conf | grep trust
-  - systemctl status mongodb
+  # - systemctl status mongodb
   - systemctl status couchdb
-  - systemctl status postgresql
-  - systemctl status elasticsearch
-  - systemctl status mysql
+  # - systemctl status postgresql
+  # - systemctl status elasticsearch
+  # - systemctl status mysql
   #- systemctl status postgresql
   #- sudo systemctl restart postgresql
   #- systemctl status postgresql
