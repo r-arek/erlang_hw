@@ -30,13 +30,13 @@ jobs:
       - elasticsearch
       script:
       - systemctl status elasticsearch
-      - sleep 10
+      - sleep 3
       - curl 127.0.0.1:9200
  
     - services: 
       - elasticsearch
       script:
       - systemctl status elasticsearch
-      - sleep 5
+      - sleep 2
       - curl 127.0.0.1:9200
       
