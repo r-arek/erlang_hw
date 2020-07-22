@@ -15,16 +15,16 @@ jobs:
        - nightly
        script: 
        - pytest
-  include:
-    - services: 
-        - elasticsearch
-      script:
-        - systemctl status elasticsearch
-        - netstat -nltp
-        - sudo ls -altr /var/log/elasticsearch
-        - sudo cat /var/log/elasticsearch/elasticsearch.log
-        - date
-        - sudo cat /etc/elasticsearch/elasticsearch.yml
+  #include:
+    #- services: 
+     #   - elasticsearch
+      #script:
+       # - systemctl status elasticsearch
+        #- netstat -nltp
+        #- sudo ls -altr /var/log/elasticsearch
+        #- sudo cat /var/log/elasticsearch/elasticsearch.log
+        #- date
+        #- sudo cat /etc/elasticsearch/elasticsearch.yml
    
    
                 
