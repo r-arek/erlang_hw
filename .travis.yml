@@ -37,4 +37,5 @@ jobs:
       - sudo systemctl start elasticsearch
       - sudo ls /etc/ | grep ela
       - netstat -nltp
+      - ifconfig
       - sleep 3600
