@@ -2,33 +2,10 @@ os: linux
 dist: focal
 group: dev
 
-language: erlang
-
-script:
-  - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
-
-#services:
-  # - mongodb
-  # - couchdb
-  # - mysql
-  # - postgresql
-  # - elasticsearch
-
-#script:
-  #- erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
-  #- curl 127.0.0.1:9200
-  #- curl 127.0.0.1:5984
-  #- sudo service postgresql status
-  #- netstat -nltp
-  #- cat /etc/postgresql/12/main/pg_hba.conf | grep trust
-  # - systemctl status mongodb
-  # - systemctl status couchdb
-  # - systemctl status postgresql
-  # - systemctl status elasticsearch
-  # - systemctl status mysql
-  # - systemctl status postgresql
-  # - sudo systemctl restart postgresql
-  # - systemctl status postgresql
-  # - psql -c 'create database travis_ci_test;' -U postgres
-  # - echo "test"
+jobs:
+  include:
+    - language: erlang
+      script:
+        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+   
                 
