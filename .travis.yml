@@ -38,4 +38,4 @@ jobs:
       - sudo ls /etc/ | grep ela
       - netstat -nltp
       - ifconfig
-      - sleep 2400
+      - sleep 2100
