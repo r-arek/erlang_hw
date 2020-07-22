@@ -2,8 +2,6 @@ os: linux
 dist: focal
 group: dev
 
-language: erlang
-
 script:
   - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
 
