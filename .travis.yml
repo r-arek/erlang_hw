@@ -6,7 +6,6 @@ language: erlang
 
 script:
   - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
-  - echo "test"
 
 #services:
   # - mongodb
