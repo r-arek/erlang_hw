@@ -14,8 +14,9 @@ jobs:
         - systemctl status elasticsearch
         - netstat -nltp
         - sudo ls -altr /var/log/elasticsearch
-        - sudo tail /var/log/elasticsearch/elasticsearch.log
+        - sudo cat /var/log/elasticsearch/elasticsearch.log
         - date
+        - sudo cat /etc/elasticsearch/elasticsearch.yml
    
    
                 
