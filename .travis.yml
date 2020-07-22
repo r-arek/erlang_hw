@@ -4,27 +4,27 @@ group: dev
 
 jobs:
   include:
-    - language: erlang
-      script:
-      - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+#     - language: erlang
+#       script:
+#       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
-    - language: python
-      python: 
-      - 3.7
-      script: 
-      - python python_hw.py
+#     - language: python
+#       python: 
+#       - 3.7
+#       script: 
+#       - python python_hw.py
     
-    - language: python
-      python: 
-      - 3.8
-      script: 
-      - python python_hw.py
+#     - language: python
+#       python: 
+#       - 3.8
+#       script: 
+#       - python python_hw.py
     
-    - language: python
-      python:
-      - nightly
-      script: 
-      - python python_hw.py
+#     - language: python
+#       python:
+#       - nightly
+#       script: 
+#       - python python_hw.py
     
     - services: 
       - elasticsearch
@@ -32,6 +32,6 @@ jobs:
       - systemctl status elasticsearch
       - sudo systemctl stop elasticsearch
       - echo 'test'
-#     - "sudo echo "http\.port\: 9200" >> /etc/elasticsearch/elasticsearch.yml"
-#       - "sudo echo "network.host: 127.0.0.1" >> /etc/elasticsearch/elasticsearch.yml"
-#       - "sudo systemctl start elasticsearch"
+      - sudo echo 'http.port: 9200' >> /etc/elasticsearch/elasticsearch.yml
+      - sudo echo 'network.host: 127.0.0.1' >> /etc/elasticsearch/elasticsearch.yml
+      - sudo systemctl start elasticsearch
