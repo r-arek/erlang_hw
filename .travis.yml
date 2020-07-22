@@ -13,9 +13,7 @@ jobs:
       script:
         - systemctl status elasticsearch
         - netstat -nltp
-        - curl 127.0.0.1:46653 
-        - curl 127.0.0.1:4369
-        - curl 127.0.0.1:36557
+        - tail /var/log/elasticsearch
    
    
                 
