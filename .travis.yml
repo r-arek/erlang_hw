@@ -3,7 +3,7 @@ dist: focal
 group: dev
 
 script:
-  #- erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+  - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
   - echo "test"
 
 #services:
