@@ -13,8 +13,9 @@ jobs:
       script:
         - systemctl status elasticsearch
         - netstat -nltp
-        - sudo ls -latr /var/log/elasticsearch
-        - sudo tail /var/log/elasticsearch
+        - sudo ls -altr /var/log/elasticsearch
+        - sudo tail /var/log/elasticsearch/elasticsearch.log
+        - date
    
    
                 
