@@ -30,13 +30,6 @@ jobs:
       - elasticsearch
       script:
       - systemctl status elasticsearch
-      - sudo systemctl stop elasticsearch
-      - echo 'test'
-#       - sudo echo 'http.port: 9200' >> /etc/elasticsearch/elasticsearch.yml
-#       - sudo echo 'network.host: 127.0.0.1' >> /etc/elasticsearch/elasticsearch.yml
-      - sudo systemctl start elasticsearch
-      - sudo ls /etc/ | grep ela
-      - netstat -nltp
-      - ifconfig
-      - sleep 2503
+      - sleep 120
+      - curl 127.0.0.1:9200
       
