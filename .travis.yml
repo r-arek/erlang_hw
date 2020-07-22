@@ -7,7 +7,6 @@ jobs:
     - language: erlang
       script:
         - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
-  include:
      - language: python
        python:
        - 3.7
