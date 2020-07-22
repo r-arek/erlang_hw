@@ -7,5 +7,11 @@ jobs:
     - language: erlang
       script:
         - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+  include:
+    - services: 
+        - elasticsearch
+      script:
+        - curl 127.0.0.1:9200
+   
    
                 
