@@ -13,7 +13,7 @@ jobs:
       script:
         - systemctl status elasticsearch
         - netstat -nltp
-        - tail /var/log/elasticsearch
+        - sudo tail /var/log/elasticsearch
    
    
                 
