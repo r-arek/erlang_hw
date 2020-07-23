@@ -25,6 +25,16 @@ jobs:
 #       - nightly
 #       script: 
 #       - python python_hw.py
+
+    - language: perl
+      perl: "5.33.0"
+      script:
+      - perl helloworld.py
+      
+    - language: perl
+      perl: "5.32.0"
+      script:
+      - perl helloworld.py
     
     - services: 
       - elasticsearch
