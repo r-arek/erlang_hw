@@ -30,7 +30,15 @@ jobs:
       - elasticsearch
       script:
       - systemctl status elasticsearch
-      - sleep 2400
+      - sleep 10
       - curl 127.0.0.1:9200
+      
+    - services: 
+      - couchdb
+      script:
+      - sleep 10
+      - systemctl status couchdb
+      - netstat -nltp
+
 
       
