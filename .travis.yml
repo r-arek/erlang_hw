@@ -43,6 +43,6 @@ jobs:
       - sleep 2400
       - curl 127.0.0.1:9200
 
-before_script:
-  - perlbrew install-cpanm --force
+before_install:
+  - "perlbrew install-cpanm --force"
       
