@@ -28,15 +28,11 @@ jobs:
 
     - language: perl
       perl: "5.33.0"
-      before_script:
-      - perlbrew install-cpanm --force
       script:
       - perl helloworld.py
       
     - language: perl
       perl: "5.32.0"
-      before_script:
-      - perlbrew install-cpanm --force
       script:
       - perl helloworld.py
     
@@ -47,4 +43,6 @@ jobs:
       - sleep 2400
       - curl 127.0.0.1:9200
 
+before_script:
+  - perlbrew install-cpanm --force
       
