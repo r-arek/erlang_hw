@@ -51,9 +51,8 @@ jobs:
        - postgresql
        script:
        - sleep 10
-       - systemctl status postgresql
-       - systemctl status postgresql@12-main.service
-       - sudo systemctl start postgresql
+       - travis_setup_postgresql focal
+       - sleep 10
        - systemctl status postgresql
        - systemctl status postgresql@12-main.service
 
