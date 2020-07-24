@@ -44,5 +44,6 @@ jobs:
       - curl 127.0.0.1:9200
 
 before_install:
-  - "sudo apt-get install -qq unixodbc unixodbc-dev"
+  - "git clone git://github.com/travis-perl/helpers ~/travis-perl-helpers"
+  - "source ~/travis-perl-helpers/init --auto"
       
