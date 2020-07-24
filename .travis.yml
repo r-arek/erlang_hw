@@ -32,4 +32,4 @@ jobs:
 
 
 script:
-  - perl helloworld.py
+  - perl helloworld.pl
