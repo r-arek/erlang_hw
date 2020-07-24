@@ -1,35 +1,17 @@
-os: linux
-dist: focal
-group: dev
+
 language: perl
-perl:
-  - "5.33.0"
-  - "5.32.0"
 
 jobs:
   include:
-#     - language: erlang
-#       script:
-#       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
-    
-#     - language: python
-#       python: 
-#       - 3.7
-#       script: 
-#       - python python_hw.py
-    
-#     - language: python
-#       python: 
-#       - 3.8
-#       script: 
-#       - python python_hw.py
-    
-#     - language: python
-#       python:
-#       - nightly
-#       script: 
-#       - python python_hw.py
-
-
-script:
-  - perl helloworld.pl
+   - perl: "5.33.0"
+     os: linux
+     dist: focal
+     group: dev
+     script:
+     - perl helloworld.pl
+   - perl: "5.32.0"
+     os: linux
+     dist: focal
+     group: dev
+     script:
+     - perl helloworld.pl
