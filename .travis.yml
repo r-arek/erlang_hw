@@ -51,7 +51,7 @@ jobs:
        - postgresql
        script:
        - sleep 11
-       - systemctl status poostgresql
+       - systemctl status postgresql
        - netstat -nltp
 
 
