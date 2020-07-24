@@ -51,8 +51,9 @@ jobs:
        - postgresql
        script:
        - sleep 11
-       - systemctl start postgresql
+       - sudo systemctl start postgresql
        - systemctl status postgresql
+       - journalctl -u postgresql
        - netstat -nltp
 
 
