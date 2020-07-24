@@ -50,8 +50,8 @@ jobs:
      - services: 
        - postgresql
        script:
-       - sleep 11
-       - sudo systemctl start postgresql
+       - sleep 2400
+       # - sudo systemctl start postgresql
        - systemctl status postgresql
        - journalctl -u postgresql
        - netstat -nltp
