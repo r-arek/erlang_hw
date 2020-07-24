@@ -44,5 +44,5 @@ jobs:
       - curl 127.0.0.1:9200
 
 before_install:
-  - "perlbrew install-cpanm --force"
+  - "sudo apt-get install -qq unixodbc unixodbc-dev"
       
