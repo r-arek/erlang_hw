@@ -1,6 +1,10 @@
 os: linux
 dist: focal
 group: dev
+language: perl
+perl:
+  - "5.33.0"
+  - "5.32.0"
 
 jobs:
   include:
@@ -26,24 +30,6 @@ jobs:
 #       script: 
 #       - python python_hw.py
 
-    - language: perl
-      perl: "5.33.0"
-      script:
-      - perl helloworld.py
-      
-    - language: perl
-      perl: "5.32.0"
-      script:
-      - perl helloworld.py
-    
-    - services: 
-      - elasticsearch
-      script:
-      - systemctl status elasticsearch
-      - sleep 2400
-      - curl 127.0.0.1:9200
 
-before_install:
-  - "git clone git://github.com/travis-perl/helpers ~/travis-perl-helpers"
-  - "source ~/travis-perl-helpers/init --auto"
-      
+script:
+  - perl helloworld.py
