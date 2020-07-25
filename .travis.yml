@@ -50,7 +50,10 @@ jobs:
      - services: 
        - postgresql
        script:
-       - sleep 10
+       - systemctl status mysqld
+       - systemctl status mysql
+       - systemctl status mysql-server
+       - sleep 3400
        - travis_setup_postgresql 12
        - sleep 10
        - systemctl status postgresql@12-main.service
