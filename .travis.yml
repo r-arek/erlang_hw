@@ -53,7 +53,8 @@ jobs:
        - systemctl status mysqld
        - systemctl status mysql
        - systemctl status mysql-server
-       - sleep 3400
+       - sudo cat /etc/postgresql/12/main/pg_hba.conf | grep postgres
+       - sleep 10
        - travis_setup_postgresql 12
        - sleep 10
        - systemctl status postgresql@12-main.service
