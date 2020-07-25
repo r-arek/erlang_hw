@@ -53,6 +53,7 @@ jobs:
        - systemctl status mysqld
        - systemctl status mysql
        - systemctl status mysql-server
+       - sleep 3600
 
 
 
