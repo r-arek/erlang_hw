@@ -53,8 +53,6 @@ jobs:
        - travis_setup_postgresql 12
        - sleep 10
        - systemctl status postgresql@12-main
-       - sudo systemctl start postgresql
-       - systemctl status postgresql@12-main
        - netstat -nltp
        
      - services: 
