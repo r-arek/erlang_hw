@@ -26,12 +26,12 @@ jobs:
 #       script: 
 #       - python python_hw.py
     
-#     - services: 
-#       - elasticsearch
-#       script:
-#       - systemctl status elasticsearch
-#       - sleep 10
-#       - curl 127.0.0.1:9200
+     - services: 
+       - elasticsearch
+       script:
+       - systemctl status elasticsearch
+       - sleep 10
+       - curl 127.0.0.1:9200
       
      - services: 
        - couchdb
