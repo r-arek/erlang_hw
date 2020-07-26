@@ -50,11 +50,21 @@ jobs:
      - services: 
        - postgresql
        script:
-       - systemctl status mysqld
+       - sleep 10
+       - systemctl status postgresql
+       
+     - services: 
+       - mysql
+       script:
+       - sleep 10
        - systemctl status mysql
-       - systemctl status mysql-server
-       - sleep 3601
-
+       
+     - services: 
+       - mariadb
+       script:
+       - sleep 10
+       - systemctl status mariadb
+       
 
 
 
