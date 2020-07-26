@@ -4,34 +4,34 @@ group: dev
 
 jobs:
   include:
-#     - language: erlang
-#       script:
-#       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
-    
-#     - language: python
-#       python: 
-#       - 3.7
-#       script: 
-#       - python python_hw.py
+    - language: erlang
+      script:
+      - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
     - language: python
       python: 
-      - 3.8
+      - 3.7
       script: 
       - python python_hw.py
     
-    - language: python
-      python:
-      - nightly
-      script: 
-      - python python_hw.py
+#     - language: python
+#       python: 
+#       - 3.8
+#       script: 
+#       - python python_hw.py
     
-    - services: 
-      - elasticsearch
-      script:
-      - systemctl status elasticsearch
-      - sleep 10
-      - curl 127.0.0.1:9200
+#     - language: python
+#       python:
+#       - nightly
+#       script: 
+#       - python python_hw.py
+    
+#     - services: 
+#       - elasticsearch
+#       script:
+#       - systemctl status elasticsearch
+#       - sleep 10
+#       - curl 127.0.0.1:9200
       
     - services: 
       - couchdb
