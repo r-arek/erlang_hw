@@ -53,6 +53,9 @@ jobs:
        - travis_setup_postgresql 12
        - sleep 10
        - systemctl status postgresql
+       - systemctl start postgresql
+       - systemctl status postgresql
+       - netstat -nltp
        
      - services: 
        - mysql
