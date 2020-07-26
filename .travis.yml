@@ -33,19 +33,19 @@ jobs:
 #       - sleep 10
 #       - curl 127.0.0.1:9200
       
-    - services: 
-      - couchdb
-      script:
-      - sleep 10
-      - systemctl status couchdb
-      - netstat -nltp
+#     - services: 
+#       - couchdb
+#       script:
+#       - sleep 10
+#       - systemctl status couchdb
+#       - netstat -nltp
       
-    - services: 
-      - mongodb
-      script:
-      - sleep 10
-      - systemctl status mongodb
-      - netstat -nltp
+#     - services: 
+#       - mongodb
+#       script:
+#       - sleep 10
+#       - systemctl status mongodb
+#       - netstat -nltp
 
 #      - services: 
 #        - postgresql
