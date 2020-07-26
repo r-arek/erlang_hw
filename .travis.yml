@@ -53,17 +53,17 @@ jobs:
        - sleep 10
        - systemctl status postgresql
        
-#      - services: 
-#        - mysql
-#        script:
-#        - sleep 10
-#        - systemctl status mysql
+     - services: 
+       - mysql
+       script:
+       - sleep 10
+       - systemctl status mysql
        
-#      - services: 
-#        - mariadb
-#        script:
-#        - sleep 10
-#        - systemctl status mariadb
+     - services: 
+       - mariadb
+       script:
+       - sleep 10
+       - systemctl status mariadb
        
 
 
