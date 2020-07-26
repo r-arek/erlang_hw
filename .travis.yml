@@ -4,68 +4,72 @@ group: dev
 
 jobs:
   include:
-     - language: erlang
-       script:
-       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+    - language: python
+      script: 
+       - sleep 3600
+       
+#      - language: erlang
+#        script:
+#        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
-     - language: python
-       python: 
-       - 3.7
-       script: 
-       - python python_hw.py
+#      - language: python
+#        python: 
+#        - 3.7
+#        script: 
+#        - python python_hw.py
     
-     - language: python
-       python: 
-       - 3.8
-       script: 
-       - python python_hw.py
+#      - language: python
+#        python: 
+#        - 3.8
+#        script: 
+#        - python python_hw.py
     
-     - language: python
-       python:
-       - nightly
-       script: 
-       - python python_hw.py
+#      - language: python
+#        python:
+#        - nightly
+#        script: 
+#        - python python_hw.py
     
-     - services: 
-       - elasticsearch
-       script:
-       - systemctl status elasticsearch
-       - sleep 10
-       - curl 127.0.0.1:9200
+#      - services: 
+#        - elasticsearch
+#        script:
+#        - systemctl status elasticsearch
+#        - sleep 10
+#        - curl 127.0.0.1:9200
       
-     - services: 
-       - couchdb
-       script:
-       - sleep 10
-       - systemctl status couchdb
-       - netstat -nltp
+#      - services: 
+#        - couchdb
+#        script:
+#        - sleep 10
+#        - systemctl status couchdb
+#        - netstat -nltp
       
-     - services: 
-       - mongodb
-       script:
-       - sleep 10
-       - systemctl status mongodb
-       - netstat -nltp
+#      - services: 
+#        - mongodb
+#        script:
+#        - sleep 10
+#        - systemctl status mongodb
+#        - netstat -nltp
 
-     - services: 
-       - postgresql
-       script:
-       - travis_setup_postgresql 12
-       - sleep 10
-       - systemctl status postgresql@12-main
-       - netstat -nltp
+#      - services: 
+#        - postgresql
+#        script:
+#        - travis_setup_postgresql 12
+#        - sleep 10
+#        - systemctl status postgresql@12-main
+#        - netstat -nltp
        
-     - services: 
-       - mysql
-       script:
-       - sleep 11
-       - systemctl status mysql
+#      - services: 
+#        - mysql
+#        script:
+#        - sleep 11
+#        - systemctl status mysql
        
-     - services: 
-       - mariadb
-       script:
-       - sleep 10
-       - systemctl status mariadb
+#      - services: 
+#        - mariadb
+#        script:
+#        - sleep 10
+#        - systemctl status mariadb
        
 
 
