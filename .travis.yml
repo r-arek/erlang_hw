@@ -8,11 +8,11 @@ jobs:
 #       script:
 #       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
-#     - language: python
-#       python: 
-#       - 3.7
-#       script: 
-#       - python python_hw.py
+     - language: python
+       python: 
+       - 3.7
+       script: 
+       - python python_hw.py
     
      - language: python
        python: 
