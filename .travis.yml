@@ -50,6 +50,7 @@ jobs:
      - services: 
        - postgresql
        script:
+       - travis_setup_postgresql 12
        - sleep 10
        - systemctl status postgresql
        
