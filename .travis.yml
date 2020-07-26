@@ -47,11 +47,11 @@ jobs:
 #       - systemctl status mongodb
 #       - netstat -nltp
 
-#      - services: 
-#        - postgresql
-#        script:
-#        - sleep 10
-#        - systemctl status postgresql
+     - services: 
+       - postgresql
+       script:
+       - sleep 10
+       - systemctl status postgresql
        
      - services: 
        - mysql
