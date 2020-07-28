@@ -74,7 +74,7 @@ jobs:
        - systemctl status mysql
      
      - addons:
-       mariadb: '10.3'
+         mariadb: '10.3'
        script:
        - sleep 10
        - systemctl status mysql
