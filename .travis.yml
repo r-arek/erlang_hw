@@ -72,9 +72,3 @@ jobs:
        script:
        - sleep 11
        - systemctl status mysql
-       
-     - services: 
-       - mariadb
-       script:
-       - sleep 11
-       - systemctl status mariadb
