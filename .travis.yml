@@ -48,7 +48,7 @@ jobs:
      - services: 
        - couchdb
        script:
-       - sleep 10
+       - sleep 20
        - systemctl status couchdb
        - netstat -nltp
       
