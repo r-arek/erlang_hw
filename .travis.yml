@@ -39,7 +39,7 @@ jobs:
        - python python_hw.py
     
      - before_install:
-       - curl -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.3.0/elasticsearch-2.3.0.deb && sudo dpkg -i --force-confnew elasticsearch-2.3.0.deb && sudo service elasticsearch restart
+       - curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.4.0.deb && sudo dpkg -i --force-confnew elasticsearch-5.4.0.deb && sudo service elasticsearch restart
        - services: 
          - elasticsearch
          script:
