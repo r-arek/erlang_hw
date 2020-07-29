@@ -38,12 +38,14 @@ jobs:
        script: 
        - python python_hw.py
     
-     - services: 
-       - elasticsearch
-       script:
-       - systemctl status elasticsearch
-       - sleep 10
-       - curl 127.0.0.1:9200
+     - before_install:
+       - curl -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.3.0/elasticsearch-2.3.0.deb && sudo dpkg -i --force-confnew elasticsearch-2.3.0.deb && sudo service elasticsearch restart
+       - services: 
+         - elasticsearch
+         script:
+         - systemctl status elasticsearch
+         - sleep 10
+         - curl 127.0.0.1:9200
       
      - services: 
        - couchdb
