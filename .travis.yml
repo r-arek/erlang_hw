@@ -72,7 +72,7 @@ jobs:
        - postgresql
        script:
        - echo $TRAVIS_DIST
-       - sleep 10
+       - sleep 11
        - systemctl status postgresql@12-main
        - netstat -nltp
        
