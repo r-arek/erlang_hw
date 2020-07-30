@@ -16,9 +16,9 @@ jobs:
 #        script:
 #          - perl helloworld.pl
        
-#      - language: erlang
-#        script:
-#        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+     - language: erlang
+       script:
+       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
 #      - language: python
 #        python: 
@@ -70,19 +70,13 @@ jobs:
        - systemctl status mongodb
        - netstat -nltp
 
-     - services: 
-       - postgresql
-       before_script:
-       - psql -c 'create database travis_ci_test;' -U postgres
-       script:
-       - systemctl status mongodb
-       - systemctl status postgresql@12-main
-       - netstat -nltp | grep 5432
-#        - echo $TRAVIS_DIST
-#        - whereis travis_setup_postgresql
-#        - sleep 11
+#      - services: 
+#        - postgresql
+#        before_script:
+#        - psql -c 'create database travis_ci_test;' -U postgres
+#        script:
 #        - systemctl status postgresql@12-main
-#        - netstat -nltp
+#        - netstat -nltp | grep 5432
        
 #      - services: 
 #        - mysql
