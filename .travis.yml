@@ -16,9 +16,9 @@ jobs:
 #        script:
 #          - perl helloworld.pl
        
-     - language: erlang
-       script:
-       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+#      - language: erlang
+#        script:
+#        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
 #      - language: python
 #        python: 
@@ -54,21 +54,21 @@ jobs:
 #        - sleep 10
 #        - curl 127.0.0.1:9200
        
-#      - services: 
-#        - couchdb
-#        script:
-#        - sleep 20
-#        - systemctl status couchdb
-#        - netstat -nltp
-      
      - services: 
-       - mongodb
-       before_script:
-       - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
+       - couchdb
        script:
-       - sleep 10
-       - systemctl status mongodb
+       - sleep 20
+       - systemctl status couchdb
        - netstat -nltp
+      
+#      - services: 
+#        - mongodb
+#        before_script:
+#        - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
+#        script:
+#        - sleep 10
+#        - systemctl status mongodb
+#        - netstat -nltp
 
 #      - services: 
 #        - postgresql
