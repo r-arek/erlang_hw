@@ -71,7 +71,7 @@ jobs:
      - services: 
        - postgresql
        script:
-       - travis_setup_postgresql 12
+       - echo $TRAVIS_DIST
        - sleep 10
        - systemctl status postgresql@12-main
        - netstat -nltp
