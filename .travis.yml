@@ -54,12 +54,12 @@ jobs:
 #        - sleep 10
 #        - curl 127.0.0.1:9200
        
-     - services: 
-       - couchdb
-       script:
-       - sleep 20
-       - systemctl status couchdb
-       - netstat -nltp
+#      - services: 
+#        - couchdb
+#        script:
+#        - sleep 20
+#        - systemctl status couchdb
+#        - netstat -nltp
       
 #      - services: 
 #        - mongodb
@@ -84,10 +84,10 @@ jobs:
 #        - sleep 11
 #        - systemctl status mysql
      
-#      - addons:
-#          mariadb: '10.3'
-#        script:
-#        - sleep 11
-#        - systemctl status mysql
-#        - systemctl status mariadb
-#        - netstat -nltp
+     - addons:
+         mariadb: '10.3'
+       script:
+       - sleep 11
+       - systemctl status mysql
+       - systemctl status mariadb
+       - netstat -nltp
