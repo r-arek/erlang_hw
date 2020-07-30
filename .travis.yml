@@ -78,11 +78,13 @@ jobs:
 #        - systemctl status postgresql@12-main
 #        - netstat -nltp | grep 5432
        
-#      - services: 
-#        - mysql
-#        script:
-#        - sleep 11
-#        - systemctl status mysql
+     - services: 
+       - mysql
+       script:
+       - sleep 11
+       - systemctl status mysql
+       - mysql -e 'CREATE DATABASE myapp_test;'
+       - sudo mysql -e 'CREATE DATABASE myapp_test2;'
      
      - addons:
          mariadb: '10.3'
