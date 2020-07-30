@@ -91,3 +91,5 @@ jobs:
        - systemctl status mysql
        - systemctl status mariadb
        - netstat -nltp
+       - mysql -e 'CREATE DATABASE myapp_test;'
+       - sudo mysql -e 'CREATE DATABASE myapp_test2;'
