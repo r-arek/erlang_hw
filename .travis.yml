@@ -66,7 +66,7 @@ jobs:
        before_script:
        - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
        script:
-       - sleep 10
+       - sleep 11
        - systemctl status mongodb
        - netstat -nltp
 
