@@ -61,21 +61,23 @@ jobs:
 #        - systemctl status couchdb
 #        - netstat -nltp
       
-#      - services: 
-#        - mongodb
-#        script:
-#        - sleep 10
-#        - systemctl status mongodb
-#        - netstat -nltp
-
      - services: 
-       - postgresql
+       - mongod
+       before_script:
+       - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
        script:
-       - echo $TRAVIS_DIST
-       - whereis travis_setup_postgresql
-       - sleep 11
-       - systemctl status postgresql@12-main
+       - sleep 10
+       - systemctl status mongodb
        - netstat -nltp
+
+#      - services: 
+#        - postgresql
+#        script:
+#        - echo $TRAVIS_DIST
+#        - whereis travis_setup_postgresql
+#        - sleep 11
+#        - systemctl status postgresql@12-main
+#        - netstat -nltp
        
 #      - services: 
 #        - mysql
