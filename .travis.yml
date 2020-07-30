@@ -4,69 +4,69 @@ group: dev
 
 jobs:
   include:
-     - language: perl
-       perl: 
-       - "5.33.0"
-       script:
-         - perl helloworld.pl
+#      - language: perl
+#        perl: 
+#        - "5.33.0"
+#        script:
+#          - perl helloworld.pl
          
-     - language: perl
-       perl: 
-       - "5.32.0"
-       script:
-         - perl helloworld.pl
+#      - language: perl
+#        perl: 
+#        - "5.32.0"
+#        script:
+#          - perl helloworld.pl
        
-     - language: erlang
-       script:
-       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+#      - language: erlang
+#        script:
+#        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
-     - language: python
-       python: 
-       - 3.7
-       script: 
-       - python python_hw.py
+#      - language: python
+#        python: 
+#        - 3.7
+#        script: 
+#        - python python_hw.py
     
-     - language: python
-       python: 
-       - 3.8
-       script: 
-       - python python_hw.py
+#      - language: python
+#        python: 
+#        - 3.8
+#        script: 
+#        - python python_hw.py
     
-     - language: python
-       python:
-       - nightly
-       script: 
-       - python python_hw.py
+#      - language: python
+#        python:
+#        - nightly
+#        script: 
+#        - python python_hw.py
     
-     - before_install:
-       - curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.4.0.deb && sudo dpkg -i --force-confnew elasticsearch-5.4.0.deb && sudo service elasticsearch restart
-       services: 
-       - elasticsearch
-       script:
-       - systemctl status elasticsearch
-       - sleep 10
-       - curl 127.0.0.1:9200
+#      - before_install:
+#        - curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.4.0.deb && sudo dpkg -i --force-confnew elasticsearch-5.4.0.deb && sudo service elasticsearch restart
+#        services: 
+#        - elasticsearch
+#        script:
+#        - systemctl status elasticsearch
+#        - sleep 10
+#        - curl 127.0.0.1:9200
       
-     - services: 
-       - elasticsearch
-       script:
-       - systemctl status elasticsearch
-       - sleep 10
-       - curl 127.0.0.1:9200
+#      - services: 
+#        - elasticsearch
+#        script:
+#        - systemctl status elasticsearch
+#        - sleep 10
+#        - curl 127.0.0.1:9200
        
-     - services: 
-       - couchdb
-       script:
-       - sleep 20
-       - systemctl status couchdb
-       - netstat -nltp
+#      - services: 
+#        - couchdb
+#        script:
+#        - sleep 20
+#        - systemctl status couchdb
+#        - netstat -nltp
       
-     - services: 
-       - mongodb
-       script:
-       - sleep 10
-       - systemctl status mongodb
-       - netstat -nltp
+#      - services: 
+#        - mongodb
+#        script:
+#        - sleep 10
+#        - systemctl status mongodb
+#        - netstat -nltp
 
      - services: 
        - postgresql
@@ -76,16 +76,16 @@ jobs:
        - systemctl status postgresql@12-main
        - netstat -nltp
        
-     - services: 
-       - mysql
-       script:
-       - sleep 11
-       - systemctl status mysql
+#      - services: 
+#        - mysql
+#        script:
+#        - sleep 11
+#        - systemctl status mysql
      
-     - addons:
-         mariadb: '10.3'
-       script:
-       - sleep 11
-       - systemctl status mysql
-       - systemctl status mariadb
-       - netstat -nltp
+#      - addons:
+#          mariadb: '10.3'
+#        script:
+#        - sleep 11
+#        - systemctl status mysql
+#        - systemctl status mariadb
+#        - netstat -nltp
