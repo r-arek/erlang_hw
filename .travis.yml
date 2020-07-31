@@ -17,12 +17,12 @@ jobs:
 #        script:
 #          - perl helloworld.pl
        
-#      - language: erlang
-#        otp_release:
-#        - 18.2.1
-#        script:
-#        - date
-#        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+     - language: erlang
+       otp_release:
+       - 18.2.1
+       script:
+       - date
+       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
 #      - language: python
 #        python: 
@@ -64,24 +64,6 @@ jobs:
        - sleep 20
        - systemctl status couchdb
        - netstat -nltp
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"       
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
       
 #      - services: 
 #        - mongodb
@@ -108,14 +90,14 @@ jobs:
 #        - systemctl status mysql
 #        - mysql -e 'CREATE DATABASE myapp_test;'
      
-#      - addons:
-#          mariadb: '10.3'
-#        script:
-#        - sleep 11
-#        - systemctl status mysql
-#        - systemctl status mariadb
-#        - netstat -nltp
-#        - mysql -e 'CREATE DATABASE myapp_test;'
-#        - sudo mysql -e 'CREATE DATABASE myapp_test2;'
+     - addons:
+         mariadb: '10.3'
+       script:
+       - sleep 11
+       - systemctl status mysql
+       - systemctl status mariadb
+       - netstat -nltp
+       - mysql -e 'CREATE DATABASE myapp_test;'
+       - sudo mysql -e 'CREATE DATABASE myapp_test2;'
 
              
