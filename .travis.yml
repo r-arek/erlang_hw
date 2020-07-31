@@ -17,12 +17,12 @@ jobs:
 #        script:
 #          - perl helloworld.pl
        
-     - language: erlang
-       otp_release:
-       - 18.2.1
-       script:
-       - date
-       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+#      - language: erlang
+#        otp_release:
+#        - 18.2.1
+#        script:
+#        - date
+#        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
 #      - language: python
 #        python: 
@@ -82,13 +82,13 @@ jobs:
 #        - systemctl status postgresql@12-main
 #        - netstat -nltp | grep 5432
        
-     - services: 
-       - mysql
-       script:
-       - date
-       - sleep 12
-       - systemctl status mysql
-       - mysql -e 'CREATE DATABASE myapp_test;'
+#      - services: 
+#        - mysql
+#        script:
+#        - date
+#        - sleep 12
+#        - systemctl status mysql
+#        - mysql -e 'CREATE DATABASE myapp_test;'
      
      - addons:
          mariadb: '10.3'
