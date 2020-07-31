@@ -82,6 +82,7 @@ jobs:
      - services: 
        - mysql
        script:
+       - date
        - sleep 12
        - systemctl status mysql
        - mysql -e 'CREATE DATABASE myapp_test;'
