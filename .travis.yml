@@ -18,6 +18,7 @@ jobs:
        
      - language: erlang
        script:
+       - date
        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
 #      - language: python
