@@ -16,9 +16,9 @@ jobs:
 #        script:
 #          - perl helloworld.pl
        
-#      - language: erlang
-#        script:
-#        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+     - language: erlang
+       script:
+       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
 #      - language: python
 #        python: 
