@@ -93,7 +93,7 @@ jobs:
      - addons:
          mariadb: '10.3'
        script:
-       - sleep 11
+       - sleep 12
        - systemctl status mysql
        - systemctl status mariadb
        - netstat -nltp
