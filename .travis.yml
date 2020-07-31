@@ -58,12 +58,30 @@ jobs:
 #        - sleep 10
 #        - curl 127.0.0.1:9200
        
-#      - services: 
-#        - couchdb
-#        script:
-#        - sleep 20
-#        - systemctl status couchdb
-#        - netstat -nltp
+     - services: 
+       - couchdb
+       script:
+       - sleep 20
+       - systemctl status couchdb
+       - netstat -nltp
+       - sleep 550
+       - echo "test"
+       - sleep 550
+       - echo "test"
+       - sleep 550
+       - echo "test"
+       - sleep 550
+       - echo "test"       
+       - sleep 550
+       - echo "test"
+       - sleep 550
+       - echo "test"
+       - sleep 550
+       - echo "test"
+       - sleep 550
+       - echo "test"
+       - sleep 550
+       - echo "test"
       
 #      - services: 
 #        - mongodb
@@ -90,31 +108,14 @@ jobs:
 #        - systemctl status mysql
 #        - mysql -e 'CREATE DATABASE myapp_test;'
      
-     - addons:
-         mariadb: '10.3'
-       script:
-       - sleep 11
-       - systemctl status mysql
-       - systemctl status mariadb
-       - netstat -nltp
-       - mysql -e 'CREATE DATABASE myapp_test;'
-       - sudo mysql -e 'CREATE DATABASE myapp_test2;'
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"       
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
-       - sleep 550
-       - echo "test"
+#      - addons:
+#          mariadb: '10.3'
+#        script:
+#        - sleep 11
+#        - systemctl status mysql
+#        - systemctl status mariadb
+#        - netstat -nltp
+#        - mysql -e 'CREATE DATABASE myapp_test;'
+#        - sudo mysql -e 'CREATE DATABASE myapp_test2;'
+
              
