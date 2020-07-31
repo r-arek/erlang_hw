@@ -23,6 +23,13 @@ jobs:
        script:
        - date
        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+       
+     - language: erlang
+       otp_release:
+       - 23.0
+       script:
+       - date
+       - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
     
      - language: python
        python: 
