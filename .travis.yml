@@ -19,7 +19,7 @@ jobs:
        
      - language: erlang
        otp_release:
-       - 18.2.1
+       - 23.0
        script:
        - date
        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
