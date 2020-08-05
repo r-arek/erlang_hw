@@ -1,7 +1,7 @@
 os: linux
 dist: focal
-arch: amd64
-group: dev
+arch: arm64-graviton2
+group: edge
 
 jobs:
   include:
